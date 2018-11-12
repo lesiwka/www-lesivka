@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% block title %}{{ text('Абетка') }}{% endblock %}
+{% block content %}
+<div class="text-center mt-3">
+    <h1>{{ text('Абетка') }}</h1>
+    <div class="container mb-3 text-nowrap abc">
+        <div class="row border border-dark">
+            <div class="col border border-dark vowel">
+                <div class="letter">A a</div>
+                <div class="letter-name">(а)</div>
+            </div>
+            <div class="col border border-dark">
+                <div class="letter">B b</div>
+                <div class="letter-name">(бе)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark">
+                <div class="letter">C c</div>
+                <div class="letter-name">(це)</div>
+            </div>
+            <div class="col border border-dark caron">
+                <div class="letter">Č č</div>
+                <div class="letter-name">(че)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark">
+                <div class="letter">D d</div>
+                <div class="letter-name">(де)</div>
+            </div>
+            <div class="col border border-dark macron">
+                <div class="letter">Đ đ</div>
+                <div class="letter-name">(дже)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark vowel">
+                <div class="letter">E e</div>
+                <div class="letter-name">(е)</div>
+            </div>
+            <div class="w-100 d-none d-md-block"></div>
+            <div class="col border border-dark">
+                <div class="letter">F f</div>
+                <div class="letter-name">(еф)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark">
+                <div class="letter">G g</div>
+                <div class="letter-name">(ґе)</div>
+            </div>
+            <div class="col border border-dark">
+                <div class="letter">H h</div>
+                <div class="letter-name">(ге/га)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark vowel">
+                <div class="letter">I i</div>
+                <div class="letter-name">(и)</div>
+            </div>
+            <div class="col border border-dark jot">
+                <div class="letter">J j</div>
+                <div class="letter-name">(йот)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark">
+                <div class="letter">K k</div>
+                <div class="letter-name">(ка)</div>
+            </div>
+            <div class="col border border-dark">
+                <div class="letter">L l</div>
+                <div class="letter-name">(ел)</div>
+            </div>
+            <div class="w-100"></div>
+            <div class="col border border-dark">
+                <div class="letter">M m</div>
+                <div class="letter-name">(ем)</div>
+            </div>
+            <div class="col border border-dark">
+                <div class="letter">N n</div>
+                <div class="letter-name">(ен)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark vowel">
+                <div class="letter">O p</div>
+                <div class="letter-name">(о)</div>
+            </div>
+            <div class="col border border-dark">
+                <div class="letter">P p</div>
+                <div class="letter-name">(пе)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark">
+                <div class="letter">R r</div>
+                <div class="letter-name">(ер)</div>
+            </div>
+            <div class="col border border-dark">
+                <div class="letter">S s</div>
+                <div class="letter-name">(ес)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark caron">
+                <div class="letter">Š š</div>
+                <div class="letter-name">(ша/еш)</div>
+            </div>
+            <div class="w-100 d-none d-md-block"></div>
+            <div class="col border border-dark">
+                <div class="letter">T t</div>
+                <div class="letter-name">(те)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark vowel">
+                <div class="letter">U u</div>
+                <div class="letter-name">(у)</div>
+            </div>
+            <div class="col border border-dark">
+                <div class="letter">V v</div>
+                <div class="letter-name">(ве)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark">
+                <div class="letter">X x</div>
+                <div class="letter-name">(ха)</div>
+            </div>
+            <div class="col border border-dark">
+                <div class="letter">Z z</div>
+                <div class="letter-name">(зе)</div>
+            </div>
+            <div class="w-100 d-md-none"></div>
+            <div class="col border border-dark caron">
+                <div class="letter">Ž ž</div>
+                <div class="letter-name">(же)</div>
+            </div>
+            <div class="col border border-dark macron">
+                <div class="letter">Ƶ ƶ</div>
+                <div class="letter-name">(дзе)</div>
+            </div>
+        </div>
+    </div>
+</div>
+<p>
+    {{ text('Абетка складається з') }} <b>28</b> {{ text('літер:') }} <b>5</b> {{ text('голосних і') }} <b>23</b> {{ text('приголосних') }}
+</p>
+<p>
+    <a href="https://uk.wikipedia.org/wiki/%D0%94%D1%96%D0%B0%D0%BA%D1%80%D0%B8%D1%82%D0%B8%D1%87%D0%BD%D0%B8%D0%B9_%D0%B7%D0%BD%D0%B0%D0%BA" target="_blank">{{ text('Діакритичні знаки') }}</a>, {{ text('що утворюють окремі літери:') }}
+</p>
+    <ul>
+        <li><a href="https://uk.wikipedia.org/wiki/%D0%93%D0%B0%D1%87%D0%B5%D0%BA" target="_blank">{{ text('гачок (карон)') }}</a>: č, š, ž</li>
+        <li><a href="https://uk.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BA%D1%80%D0%BE%D0%BD" target="_blank">{{ text('риска (макрон)') }}</a>: đ, ƶ</li>
+    </ul>
+<p>
+    <a href="https://uk.wikipedia.org/wiki/%D0%90%D0%BA%D1%83%D1%82" target="_blank">{{ text('Штрих (акут)') }}</a> {{ text('не утворює окрему літеру') }} ({{ text('дивіться') }} <a href="{{ page('spell') }}">{{ text('Правопис') }}</a>)
+</p>
+{% endblock %}

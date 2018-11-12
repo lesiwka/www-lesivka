@@ -1,22 +1,27 @@
-import lesivka
-from flask import Flask, request
+from flask import Flask, render_template
+from jinja2.exceptions import TemplateNotFound
+
+from lesivka_www.context import active, page, switch, text
+from lesivka_www.routes.www import www
+from lesivka_www.routes.transcode import transcode
+from lesivka_www.utils import get_template
 
 app = Flask(__name__)
+app.register_blueprint(www)
+app.register_blueprint(transcode)
+app.secret_key = 'super secret key'
 
 
-def get_text():
-    keys = list(request.values.keys())
-    return request.values.get('t', keys[0] if keys else '')
+@app.context_processor
+def template_injection():
+    return dict(active=active, page=page, switch=switch, text=text)
 
 
-@app.route('/encode', methods=['GET', 'POST'])
-def encode():
-    return lesivka.encode(get_text())
-
-
-@app.route('/decode', methods=['GET', 'POST'])
-def decode():
-    return lesivka.decode(get_text())
+@app.errorhandler(404)
+@app.errorhandler(TemplateNotFound)
+def page_not_found(_):
+    template = get_template('404')
+    return render_template(template), 404
 
 
 if __name__ == '__main__':

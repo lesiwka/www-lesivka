@@ -4,3 +4,7 @@ handlers:
 - url: /.*
   script: home.app
   secure: always
+
+- url: /static
+  static_dir: static
+  secure: always

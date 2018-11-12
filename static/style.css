@@ -1,0 +1,62 @@
+html {
+    position: relative;
+    min-height: 100vh;
+}
+body {
+    margin-bottom: 60px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+body > .container {
+    padding: 60px 15px 10px;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.abc {
+    background-color: #cfe2f3;
+}
+
+.abc .col {
+    height: 5rem;
+}
+
+.abc .caron {
+    background-color: #c9daf8;
+}
+
+.abc .jot {
+    background-color: #d9ead3;
+}
+
+.abc .macron {
+    background-color: #d9d2e9;
+}
+
+.abc .vowel {
+    background-color: #f4cccc;
+}
+
+.letter {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.letter-name {
+    font-style: italic;
+}
+
+.conv textarea {
+    height: 35vh;
+    resize: none;
+}

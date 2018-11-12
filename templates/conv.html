@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}{{ text('Конвертер') }}{% endblock %}
+{% block content %}
+<h1 class="mt-3 text-center">{{ text('Конвертер') }}</h1>
+<form class="conv">
+    <div class="row">
+        <div class="form-group col">
+            <textarea id="cyr" class="form-control" placeholder="{{ text('Кирилиця') }}" oninput="document.getElementById('lat').value = lesivka.encode(document.getElementById('cyr').value);"></textarea>
+        </div>
+        <div class="w-100 d-md-none"></div>
+        <div class="form-group col">
+            <textarea id="lat" class="form-control" placeholder="{{ text('Латинка') }}" oninput="document.getElementById('cyr').value = lesivka.decode(document.getElementById('lat').value);"></textarea>
+        </div>
+    </div>
+</form>
+{% endblock %}
+{% block script %}
+<script src="/static/lesivka.js"></script>
+{% endblock %}

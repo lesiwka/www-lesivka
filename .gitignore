@@ -1,0 +1,5 @@
+.idea/
+__pycache__/
+lesivka/
+static/lesivka.js
+templates/gtag.html

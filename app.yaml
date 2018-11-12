@@ -2,7 +2,7 @@ runtime: python37
 
 handlers:
 - url: /.*
-  script: home.app
+  script: auto
   secure: always
 
 - url: /static

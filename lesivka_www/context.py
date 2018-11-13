@@ -1,7 +1,6 @@
-import lesivka
 from flask import request, url_for
 
-from .utils import get_mode
+from .utils import encode, get_mode
 
 
 def active(classes='', **checks):
@@ -24,4 +23,4 @@ def switch(mode):
 
 
 def text(t):
-    return lesivka.encode(t) if get_mode() == 'lat' else t
+    return encode(t) if get_mode() == 'lat' else t

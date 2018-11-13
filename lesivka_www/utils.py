@@ -1,9 +1,16 @@
-from flask import abort, request, session
+from flask import Markup, abort, request, session
+
+import lesivka
 
 
 def check_mode(mode):
     if mode not in ('cyr', 'lat'):
         abort(404)
+
+
+def encode(text):
+    text = lesivka.encode(text).encode('ascii', 'xmlcharrefreplace').decode()
+    return Markup(text)
 
 
 def get_mode():

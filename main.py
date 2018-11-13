@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from jinja2.exceptions import TemplateNotFound
 
+import lesivka
 from lesivka_www.context import active, page, switch, text
 from lesivka_www.routes.www import www
 from lesivka_www.routes.transcode import transcode
@@ -14,7 +15,13 @@ app.secret_key = 'super secret key'
 
 @app.context_processor
 def template_injection():
-    return dict(active=active, page=page, switch=switch, text=text)
+    return dict(
+        active=active,
+        encode=lesivka.encode,
+        page=page,
+        switch=switch,
+        text=text,
+    )
 
 
 @app.errorhandler(404)

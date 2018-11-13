@@ -1,0 +1,6 @@
+{% macro examples() -%}
+{% for word in varargs -%}
+<abbr title="{{ word }}">{{ encode(word) }}</abbr>
+{%- if not loop.last %}, {% endif %}
+{%- endfor %}
+{%- endmacro %}

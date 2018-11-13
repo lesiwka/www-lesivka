@@ -60,3 +60,9 @@ body > .container {
     height: 35vh;
     resize: none;
 }
+
+abbr {
+    border-bottom: 1px dashed !important;
+    font-style: italic;
+    text-decoration: none !important;
+}

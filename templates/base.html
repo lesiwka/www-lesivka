@@ -50,9 +50,17 @@
                             <li class="{{ active('nav-item', name='usage') }}">
                                 <a class="nav-link" href="{{ page('usage') }}">{{ text('Вживання') }}</a>
                             </li>
+                            <li class="nav-item dropdown">
+                                <div class="{{ active('nav-link dropdown-toggle', name__startswith='examples/') }}" data-toggle="dropdown">{{ text('Приклади') }}</div>
+                                <div class="dropdown-menu">
+                                    <a class="{{ active('dropdown-item', name='examples/mavka') }}" href="{{ page('examples/mavka') }}">{{ text('Леся Українка') }}</a>
+                                    <a class="{{ active('dropdown-item', name='examples/sadok') }}" href="{{ page('examples/sadok') }}">{{ text('Тарас Шевченко') }}</a>
+                                </div>
+                            </li>
                         </ul>
+                        <hr class="d-md-none">
                         <div class="navbar-nav mr-auto">
-                            <a class="btn btn-success" role="button" href="{{ page('conv') }}">{{ text('Конвертер') }}</a>
+                            <a class="{{ active('btn btn-success', name='conv') }}" role="button" href="{{ page('conv') }}">{{ text('Конвертер') }}</a>
                         </div>
                         <hr class="d-md-none">
                         <div class="btn-group d-flex btn-group-sm">

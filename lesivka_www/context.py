@@ -3,9 +3,17 @@ from flask import request, url_for
 from .utils import encode, get_mode
 
 
+_clauses = {
+    '': lambda a, b: a == b,
+    'startswith': lambda a, b: a.startswith(b),
+}
+
+
 def active(classes='', **checks):
     for key, value in checks.items():
-        if request.view_args.get(key) != value:
+        arg, _, clause = key.partition('__')
+        check = _clauses[clause]
+        if not check(request.view_args.get(arg, ''), value):
             return classes
     return ' '.join([classes, 'active'])
 

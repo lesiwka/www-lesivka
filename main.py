@@ -26,7 +26,7 @@ def template_injection():
 @app.errorhandler(404)
 @app.errorhandler(TemplateNotFound)
 def page_not_found(_):
-    template = get_template('404')
+    template = get_template('errors/404')
     return render_template(template), 404
 
 

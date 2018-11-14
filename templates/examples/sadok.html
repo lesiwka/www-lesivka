@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import example with context %}
+{% block title %}{{ text('Тарас Шевченко') }}{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1 class="mt-3">{{ text('Тарас Шевченко') }}</h1>
+    <h2>VIII</h2>
+    <h6>({{ text('з циклу') }} &laquo;{{ text('В казематі') }}&raquo;)</h6>
+</div>
+<div class="">
+    <div class="poem w16 pl-5 mx-auto">
+        <div class="mt-3">
+            {{ example('Садок вишневий коло хати,') }}
+            {{ example('Хрущі над вишнями гудуть,') }}
+            {{ example('Плугатарі з плугами йдуть,') }}
+            {{ example('Співають ідучи дівчата,') }}
+            {{ example('А матері вечерять ждуть.') }}
+        </div>
+        <div class="mt-3">
+            {{ example("Сем'я вечеря коло хати,") }}
+            {{ example('Вечірня зіронька встає.') }}
+            {{ example('Дочка вечерять подає,') }}
+            {{ example('А мати хоче научати,') }}
+            {{ example('Так соловейко не дає.') }}
+        </div>
+        <div class="mt-3">
+            {{ example('Поклала мати коло хати') }}
+            {{ example('Маленьких діточок своїх;') }}
+            {{ example('Сама заснула коло їх.') }}
+            {{ example('Затихло все, тілько дівчата') }}
+            {{ example('Та соловейко не затих.') }}
+        </div>
+    </div>
+</div>
+{% endblock %}

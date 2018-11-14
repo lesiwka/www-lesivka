@@ -74,3 +74,41 @@ abbr {
 .usage td {
     vertical-align: middle;
 }
+
+.poem.w16 {
+    width: 16em;
+}
+
+.poem.w20 {
+    width: 20em;
+}
+
+.hoverable {
+    user-select: none;
+}
+
+.hoverable .hover {
+    display: none;
+}
+
+.hoverable:hover .normal {
+    display: none;
+}
+
+.hoverable:hover .hover {
+    display: inline;
+}
+
+.examples.hoverable {
+    padding-bottom: 1em;
+    font-style: italic;
+}
+
+.examples.hoverable .normal {
+    border-bottom: 1px dashed;
+}
+
+.examples.hoverable .hover {
+    padding-left: .5em;
+    padding-right: .5em;
+}

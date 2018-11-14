@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import example with context %}
+{% block title %}{{ text('Леся Українка') }}{% endblock %}
+{% block content %}
+<div class="text-center">
+    <h1 class="mt-3">{{ text('Леся Українка') }}</h1>
+    <h2>&laquo;{{ text('Лісова пісня') }}&raquo;</h2>
+    <h6>{{ text('(останній монолог Мавки)') }}</h6>
+</div>
+<div class="">
+    <div class="poem w20 pl-5 mx-auto">
+        <div class="mt-3">
+            {{ example('О, не журися за тіло!', indent=True) }}
+            {{ example('Ясним вогнем засвітилось воно,') }}
+            {{ example('чистим, палючим, як добре вино,') }}
+            {{ example('вільними іскрами вгору злетіло.') }}
+        </div>
+        <div class="mt-3">
+            {{ example('Легкий, пухкий попілець', indent=True) }}
+            {{ example('ляже, вернувшися, в рідну землицю,') }}
+            {{ example('вкупі з водою там зростить вербицю, –') }}
+            {{ example('стане початком тоді мій кінець.') }}
+        </div>
+        <div class="mt-3">
+            {{ example('Будуть приходити люди,', indent=True) }}
+            {{ example('вбогі й багаті, веселі й сумні,') }}
+            {{ example('радощі й тугу нестимуть мені,') }}
+            {{ example('їм промовляти душа моя буде.') }}
+        </div>
+        <div class="mt-3">
+            {{ example('Я обізвуся до них', indent=True) }}
+            {{ example('шелестом тихим вербової гілки,') }}
+            {{ example('голосом ніжним тонкої сопілки,') }}
+            {{ example('смутними росами з вітів моїх.') }}
+        </div>
+        <div class="mt-3">
+            {{ example('Я їм тоді проспіваю', indent=True) }}
+            {{ example('все, що колись ти для мене співав,') }}
+            {{ example('ще як напровесні тут вигравав,') }}
+            {{ example('мрії збираючи в гаю…') }}
+            {{ example('Грай же, коханий, благаю!', indent=True) }}
+        </div>
+    </div>
+</div>
+{% endblock %}

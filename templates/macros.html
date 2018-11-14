@@ -1,6 +1,17 @@
+{#{% macro examples() -%}#}
+{#{% for word in varargs -%}#}
+{#<abbr title="{{ word }}">{{ encode(word) }}</abbr>#}
+{#{%- if not loop.last %}, {% endif %}#}
+{#{%- endfor %}#}
+{#{%- endmacro %}#}
+
+{% macro hoverable(word) -%}
+<span class="examples hoverable"><span class="normal">{{ encode(word) }}</span><span class="hover bg-secondary text-light text-nowrap">{{ word }}</span></span>
+{%- endmacro %}
+
 {% macro examples() -%}
 {% for word in varargs -%}
-<abbr title="{{ word }}">{{ encode(word) }}</abbr>
+{{ hoverable(word) }}
 {%- if not loop.last %}, {% endif %}
 {%- endfor %}
 {%- endmacro %}
@@ -10,7 +21,8 @@
     <td>{{ letter }}</td>
     <td>{{ text('штрих') if softsign else encode(letter) }}</td>
     <td class="d-none d-md-table-cell">{{ example }}</td>
-    <td>{{ encode(example) }}</td>
+    <td class="d-none d-md-table-cell">{{ encode(example) }}</td>
+    <td class="d-table-cell d-md-none">{{ hoverable(example) }}</td>
 </tr>
 {%- endmacro %}
 
@@ -19,11 +31,21 @@
     <td rowspan="2">{{ letter }}</td>
     <td>{{ encode(letter) }}</td>
     <td class="d-none d-md-table-cell">{{ example1 }}</td>
-    <td>{{ encode(example1) }}</td>
+    <td class="d-none d-md-table-cell">{{ encode(example1) }}</td>
+    <td class="d-table-cell d-md-none">{{ hoverable(example1) }}</td>
 </tr>
 <tr>
     <td class="text-nowrap">{{ text('штрих') }} + {{ encode(letter)[-1] }}</td>
     <td class="d-none d-md-table-cell">{{ example2 }}</td>
-    <td>{{ encode(example2) }}</td>
+    <td class="d-none d-md-table-cell">{{ encode(example2) }}</td>
+    <td class="d-table-cell d-md-none">{{ hoverable(example2) }}</td>
 </tr>
+{%- endmacro %}
+
+{% macro example(text, indent=False) -%}
+<div class="hoverable">
+    {%- if indent %}<span class="ml-4"></span>{% endif -%}
+    <span class="normal">{{ encode(text) }}</span>
+    <span class="hover bg-secondary text-light text-nowrap">{{ text }}</span>
+</div>
 {%- endmacro %}

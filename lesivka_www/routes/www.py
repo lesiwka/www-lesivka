@@ -12,7 +12,7 @@ def root():
 
 
 @www.route('/<mode>', defaults=dict(name='index'))
-@www.route('/<mode>/<name>')
+@www.route('/<mode>/<path:name>')
 def template_view(mode, name):
     check_mode(mode)
     if session.new:

@@ -4,3 +4,26 @@
 {%- if not loop.last %}, {% endif %}
 {%- endfor %}
 {%- endmacro %}
+
+{% macro usage(letter, example, softsign=False) -%}
+<tr>
+    <td>{{ letter }}</td>
+    <td>{{ text('штрих') if softsign else encode(letter) }}</td>
+    <td class="d-none d-md-table-cell">{{ example }}</td>
+    <td>{{ encode(example) }}</td>
+</tr>
+{%- endmacro %}
+
+{% macro usagej(letter, example1, example2) -%}
+<tr>
+    <td rowspan="2">{{ letter }}</td>
+    <td>{{ encode(letter) }}</td>
+    <td class="d-none d-md-table-cell">{{ example1 }}</td>
+    <td>{{ encode(example1) }}</td>
+</tr>
+<tr>
+    <td class="text-nowrap">{{ text('штрих') }} + {{ encode(letter)[-1] }}</td>
+    <td class="d-none d-md-table-cell">{{ example2 }}</td>
+    <td>{{ encode(example2) }}</td>
+</tr>
+{%- endmacro %}

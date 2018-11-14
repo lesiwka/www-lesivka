@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% from 'macros.html' import usage, usagej with context %}
+{% block title %}{{ text('Вживання') }}{% endblock %}
+{% block content %}
+<h1 class="text-center mt-3">{{ text('Вживання') }}</h1>
+<div class="table-responsive">
+    <table class="table table-bordered usage">
+        <thead class="thead-dark">
+            <tr class="d-none d-md-table-row">
+                <th class="inline-block text-truncate">{{ text('Кирилиця') }}</th>
+                <th>{{ text('Лесівка') }}</th>
+                <th colspan="2">{{ text('Приклад') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ usage('а', 'акула') }}
+            {{ usage('б', 'бабак') }}
+            {{ usage('в', 'вовк') }}
+            {{ usage('г', 'галка') }}
+            {{ usage('ґ', 'ґава') }}
+            {{ usage('д', 'дуб') }}
+            {{ usage('е', 'ему') }}
+            {{ usagej('є', 'єнот', 'майбутнє') }}
+            {{ usage('ж', 'жаба') }}
+            {{ usage('з', 'зубр') }}
+            {{ usage('и', 'калина') }}
+            {{ usagej('і', 'інший', 'ластівка') }}
+            {{ usage('ї', 'їжак') }}
+            {{ usage('й', 'йорж') }}
+            {{ usage('к', 'качка') }}
+            {{ usage('л', 'лелека') }}
+            {{ usage('м', 'муха') }}
+            {{ usage('н', 'нетопир') }}
+            {{ usage('о', 'орел') }}
+            {{ usage('п', 'павич') }}
+            {{ usage('р', 'равлик') }}
+            {{ usage('с', 'собака') }}
+            {{ usage('т', 'тигр') }}
+            {{ usage('у', 'удав') }}
+            {{ usage('ф', 'фретка') }}
+            {{ usage('х', 'ховрах') }}
+            {{ usage('ц', 'цесарка') }}
+            {{ usage('ч', 'чайка') }}
+            {{ usage('ш', 'шпак') }}
+            {{ usage('щ', 'щур') }}
+            {{ usage('ь', 'олень', softsign=True) }}
+            {{ usagej('ю', 'юнак', 'гадюка') }}
+            {{ usagej('я', 'яблуко', 'дятел') }}
+            {{ usage('дж', 'джміль') }}
+            {{ usage('дз', 'ґедзь') }}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

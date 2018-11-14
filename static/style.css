@@ -66,3 +66,11 @@ abbr {
     font-style: italic;
     text-decoration: none !important;
 }
+
+.usage {
+    text-align: center;
+}
+
+.usage td {
+    vertical-align: middle;
+}

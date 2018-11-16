@@ -3,6 +3,7 @@ html {
     min-height: 100vh;
 }
 body {
+    font-family: 'Georgia', 'Times', "Times New Roman", serif;
     margin-bottom: 60px;
 }
 .footer {
@@ -61,12 +62,6 @@ body > .container {
     resize: none;
 }
 
-abbr {
-    border-bottom: 1px dashed !important;
-    font-style: italic;
-    text-decoration: none !important;
-}
-
 .usage {
     text-align: center;
 }
@@ -75,12 +70,12 @@ abbr {
     vertical-align: middle;
 }
 
-.poem.w16 {
-    width: 16em;
+.poem.w12 {
+    width: 12rem;
 }
 
-.poem.w20 {
-    width: 20em;
+.poem.w16 {
+    width: 16rem;
 }
 
 .hoverable {

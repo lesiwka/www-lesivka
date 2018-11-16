@@ -43,9 +43,9 @@
 {%- endmacro %}
 
 {% macro example(text, indent=False) -%}
-<div class="hoverable">
+<div class="hoverable text-nowrap">
     {%- if indent %}<span class="ml-4"></span>{% endif -%}
     <span class="normal">{{ encode(text) }}</span>
-    <span class="hover bg-secondary text-light text-nowrap">{{ text }}</span>
+    <span class="hover bg-secondary text-light">{{ text }}</span>
 </div>
 {%- endmacro %}

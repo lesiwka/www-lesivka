@@ -1,10 +1,21 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
+        url('/static/fonts/subset-NotoSans-Regular.woff2') format('woff2'),
+        url('/static/fonts/subset-NotoSans-Regular.woff') format('woff'),
+        url('/static/fonts/subset-NotoSans-Regular.ttf') format('truetype');
+}
+
 html {
     position: relative;
     min-height: 100vh;
 }
+
 body {
+    font-family: 'Noto Sans', sans-serif;
     margin-bottom: 60px;
 }
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -12,7 +23,6 @@ body {
     height: 60px;
     line-height: 60px;
 }
-
 
 body > .container {
     padding: 60px 15px 10px;

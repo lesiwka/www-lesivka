@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Noto Sans';
-    src: local('Noto Sans Regular'), local('NotoSans-Regular'),
-        url('/static/fonts/subset-NotoSans-Regular.woff2') format('woff2'),
-        url('/static/fonts/subset-NotoSans-Regular.woff') format('woff'),
-        url('/static/fonts/subset-NotoSans-Regular.ttf') format('truetype');
+    src:
+        url('/static/fonts/NotoSans-Regular.woff2') format('woff2'),
+        url('/static/fonts/NotoSans-Regular.woff') format('woff'),
+        url('/static/fonts/NotoSans-Regular.ttf') format('truetype');
 }
 
 html {

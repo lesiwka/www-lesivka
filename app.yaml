@@ -1,9 +1,9 @@
 runtime: python37
 
 handlers:
-- url: /favicon\.ico
-  static_files: static/favicon.ico
-  upload: static/favicon\.ico
+- url: /(favicon\.ico|apple-touch-icon\.png|browserconfig\.xml)$
+  static_files: static/icons/\1
+  upload: static/icons/(favicon\.ico|apple-touch-icon\.png|browserconfig\.xml)$
   secure: always
 
 - url: /static

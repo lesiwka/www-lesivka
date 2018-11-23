@@ -1,9 +1,9 @@
-{#{% macro examples() -%}#}
-{#{% for word in varargs -%}#}
-{#<abbr title="{{ word }}">{{ encode(word) }}</abbr>#}
-{#{%- if not loop.last %}, {% endif %}#}
-{#{%- endfor %}#}
-{#{%- endmacro %}#}
+{% macro letter(l, n, c=None) -%}
+<div class="col border border-dark{% if c %} {{ c }}{% endif %}">
+    <div class="mt-3 letter">{{ l }} {{ l | lower }}</div>
+    <div class="mb-3 letter-name">({{ n }})</div>
+</div>
+{%- endmacro %}
 
 {% macro hoverable(word) -%}
 <span class="examples hoverable"><span class="normal">{{ encode(word) }}</span><span class="hover bg-secondary text-light text-nowrap">{{ word }}</span></span>

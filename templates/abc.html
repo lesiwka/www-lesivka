@@ -1,137 +1,54 @@
 {% extends 'base.html' %}
+{% from 'macros.html' import letter %}
 {% block title %}{{ text('Абетка') }}{% endblock %}
 {% block content %}
 <div class="text-center mt-3">
     <h1>{{ text('Абетка') }}</h1>
     <div class="container mb-3 text-nowrap abc">
         <div class="row border border-dark">
-            <div class="col border border-dark vowel">
-                <div class="letter">A a</div>
-                <div class="letter-name">(а)</div>
-            </div>
-            <div class="col border border-dark">
-                <div class="letter">B b</div>
-                <div class="letter-name">(бе)</div>
-            </div>
+            {{ letter('A', 'а', 'vowel') }}
+            {{ letter('B', 'бе') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark">
-                <div class="letter">C c</div>
-                <div class="letter-name">(це)</div>
-            </div>
-            <div class="col border border-dark caron">
-                <div class="letter">Č č</div>
-                <div class="letter-name">(че)</div>
-            </div>
+            {{ letter('C', 'це') }}
+            {{ letter('Č', 'че', 'caron') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark">
-                <div class="letter">D d</div>
-                <div class="letter-name">(де)</div>
-            </div>
-            <div class="col border border-dark macron">
-                <div class="letter">Đ đ</div>
-                <div class="letter-name">(дже)</div>
-            </div>
+            {{ letter('D', 'де') }}
+            {{ letter('Đ', 'дже', 'macron') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark vowel">
-                <div class="letter">E e</div>
-                <div class="letter-name">(е)</div>
-            </div>
+            {{ letter('E', 'е', 'vowel') }}
             <div class="w-100 d-none d-md-block"></div>
-            <div class="col border border-dark">
-                <div class="letter">F f</div>
-                <div class="letter-name">(еф)</div>
-            </div>
+            {{ letter('F', 'еф') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark">
-                <div class="letter">G g</div>
-                <div class="letter-name">(ґе)</div>
-            </div>
-            <div class="col border border-dark">
-                <div class="letter">H h</div>
-                <div class="letter-name">(ге/га)</div>
-            </div>
+            {{ letter('G', 'ґе') }}
+            {{ letter('H', 'ге/га') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark vowel">
-                <div class="letter">I i</div>
-                <div class="letter-name">(и)</div>
-            </div>
-            <div class="col border border-dark jot">
-                <div class="letter">J j</div>
-                <div class="letter-name">(йот)</div>
-            </div>
+            {{ letter('I', 'и', 'vowel') }}
+            {{ letter('J', 'йот', 'jot') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark">
-                <div class="letter">K k</div>
-                <div class="letter-name">(ка)</div>
-            </div>
-            <div class="col border border-dark">
-                <div class="letter">L l</div>
-                <div class="letter-name">(ел)</div>
-            </div>
+            {{ letter('K', 'ка') }}
+            {{ letter('L', 'ел') }}
             <div class="w-100"></div>
-            <div class="col border border-dark">
-                <div class="letter">M m</div>
-                <div class="letter-name">(ем)</div>
-            </div>
-            <div class="col border border-dark">
-                <div class="letter">N n</div>
-                <div class="letter-name">(ен)</div>
-            </div>
+            {{ letter('M', 'ем') }}
+            {{ letter('N', 'ен') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark vowel">
-                <div class="letter">O p</div>
-                <div class="letter-name">(о)</div>
-            </div>
-            <div class="col border border-dark">
-                <div class="letter">P p</div>
-                <div class="letter-name">(пе)</div>
-            </div>
+            {{ letter('O', 'о', 'vowel') }}
+            {{ letter('P', 'пе') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark">
-                <div class="letter">R r</div>
-                <div class="letter-name">(ер)</div>
-            </div>
-            <div class="col border border-dark">
-                <div class="letter">S s</div>
-                <div class="letter-name">(ес)</div>
-            </div>
+            {{ letter('R', 'ер') }}
+            {{ letter('S', 'ес') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark caron">
-                <div class="letter">Š š</div>
-                <div class="letter-name">(ша/еш)</div>
-            </div>
+            {{ letter('Š', 'ша/еш', 'caron') }}
             <div class="w-100 d-none d-md-block"></div>
-            <div class="col border border-dark">
-                <div class="letter">T t</div>
-                <div class="letter-name">(те)</div>
-            </div>
+            {{ letter('T', 'те') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark vowel">
-                <div class="letter">U u</div>
-                <div class="letter-name">(у)</div>
-            </div>
-            <div class="col border border-dark">
-                <div class="letter">V v</div>
-                <div class="letter-name">(ве)</div>
-            </div>
+            {{ letter('U', 'у', 'vowel') }}
+            {{ letter('V', 'ве') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark">
-                <div class="letter">X x</div>
-                <div class="letter-name">(ха)</div>
-            </div>
-            <div class="col border border-dark">
-                <div class="letter">Z z</div>
-                <div class="letter-name">(зе)</div>
-            </div>
+            {{ letter('X', 'ха') }}
+            {{ letter('Z', 'зе') }}
             <div class="w-100 d-md-none"></div>
-            <div class="col border border-dark caron">
-                <div class="letter">Ž ž</div>
-                <div class="letter-name">(же)</div>
-            </div>
-            <div class="col border border-dark macron">
-                <div class="letter">Ƶ ƶ</div>
-                <div class="letter-name">(дзе)</div>
-            </div>
+            {{ letter('Ž', 'же', 'caron') }}
+            {{ letter('Ƶ', 'дзе', 'macron') }}
         </div>
     </div>
 </div>

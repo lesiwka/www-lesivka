@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from flask import Flask, render_template
 from jinja2.exceptions import TemplateNotFound
 
@@ -9,7 +11,7 @@ from lesivka_www.utils import encode, get_template
 app = Flask(__name__)
 app.register_blueprint(www)
 app.register_blueprint(transcode)
-app.secret_key = 'super secret key'
+app.secret_key = Path('SECRET_KEY').read_bytes()
 
 
 @app.context_processor

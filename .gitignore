@@ -3,3 +3,4 @@ __pycache__/
 lesivka/
 static/lesivka.js
 templates/gtag.html
+SECRET_KEY

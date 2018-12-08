@@ -1,3 +1,5 @@
+import re
+
 from flask import request, url_for
 
 from .utils import encode, get_mode
@@ -7,6 +9,8 @@ _clauses = {
     '': lambda a, b: a == b,
     'startswith': lambda a, b: a.startswith(b),
 }
+
+_clean_pat = re.compile('\W')
 
 
 def active(classes='', **checks):
@@ -30,5 +34,11 @@ def switch(mode):
     return url_for(endpoint, **args)
 
 
-def text(t):
-    return encode(t) if get_mode() == 'lat' else t
+def text(t, clear=False):
+    if get_mode() == 'lat':
+        if clear:
+           t = _clean_pat.sub('', t)
+
+        return encode(t)
+
+    return t

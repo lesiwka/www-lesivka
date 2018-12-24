@@ -9,12 +9,13 @@
 <span class="examples hoverable"><span class="normal">{{ encode(word) }}</span><span class="hover bg-secondary text-light text-nowrap">{{ word }}</span></span>
 {%- endmacro %}
 
-{% macro examples() -%}
-{% for word in varargs -%}
-{{ hoverable(word) }}
-{%- if not loop.last %}, {% endif %}
-{%- endfor %}
-{%- endmacro %}
+{% macro examples() %}
+<ul>
+    {% for word in varargs -%}
+    <li>{{ hoverable(word) }}</li>
+    {%- endfor %}
+</ul>
+{% endmacro %}
 
 {% macro usage(letter, example, softsign=False) -%}
 <tr>

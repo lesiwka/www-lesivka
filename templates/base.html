@@ -60,11 +60,15 @@
                             </li>
                         </ul>
                         <hr class="d-md-none">
-                        <div class="navbar-nav mx-auto">
+                        <div class="btn-group d-none d-md-flex mx-auto">
                             <a class="{{ active('btn btn-success', name='conv') }}" role="button" href="{{ page('conv') }}">{{ text('Конвертер') }}</a>
+                            <a class="btn btn-success" role="button" href="{{ page('conv') }}" target="_blank" title="{{ text('Відкрити окремо') }}">&#x1f855;</a>
+                        </div>
+                        <div class="d-md-none">
+                            <a class="{{ active('btn btn-success w-100', name='conv') }}" role="button" href="{{ page('conv') }}">{{ text('Конвертер') }}</a>
                         </div>
                         <hr class="d-md-none">
-                        <div class="btn-group d-flex btn-group-sm">
+                        <div class="btn-group btn-group-sm d-flex">
                             <a class="{{ active('btn btn-light w-100', mode='cyr') }}" role="button" href="{{ switch('cyr') }}">Кирилиця</a>
                             <a class="{{ active('btn btn-light w-100', mode='lat') }}" role="button" href="{{ switch('lat') }}">{{ encode('Латинка') }}</a>
                         </div>

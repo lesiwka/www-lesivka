@@ -4,3 +4,5 @@ lesivka/
 static/lesivka.js
 templates/gtag.html
 SECRET_KEY
+venv/
+_downloads/

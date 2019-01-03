@@ -20,7 +20,7 @@
 {% macro usage(letter, example, softsign=False) -%}
 <tr>
     <td>{{ letter }}</td>
-    <td>{{ text('штрих') if softsign else encode(letter) }}</td>
+    <td>{{ text('скіпка') if softsign else encode(letter) }}</td>
     <td class="d-none d-md-table-cell">{{ example }}</td>
     <td class="d-none d-md-table-cell">{{ encode(example) }}</td>
     <td class="d-table-cell d-md-none">{{ hoverable(example) }}</td>
@@ -36,7 +36,7 @@
     <td class="d-table-cell d-md-none">{{ hoverable(example1) }}</td>
 </tr>
 <tr>
-    <td class="text-nowrap">{{ text('штрих') }} + {{ encode(letter)[-1] }}</td>
+    <td class="text-nowrap">{{ text('скіпка') }} + {{ encode(letter)[-1] }}</td>
     <td class="d-none d-md-table-cell">{{ example2 }}</td>
     <td class="d-none d-md-table-cell">{{ encode(example2) }}</td>
     <td class="d-table-cell d-md-none">{{ hoverable(example2) }}</td>

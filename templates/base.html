@@ -31,7 +31,7 @@
 
     <body>
         <header>
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
                 <div class="container d-flex justify-content-between">
                     <a href="{{ url_for('www.root') }}" class="navbar-brand">{{ encode('Лесівка') }}</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,34 +40,27 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav">
                             <li class="{{ active('nav-item', name='index') }}">
-                                <a class="nav-link" href="{{ page() }}">{{ text('Вступ') }}</a>
+                                <a class="nav-link" href="{{ page() }}">{{ text('Загальні відомості') }}</a>
                             </li>
                             <li class="{{ active('nav-item', name='abc') }}">
-                                <a class="nav-link" href="{{ page('abc') }}">{{ text('Абетка') }}</a>
-                            </li>
-                            <li class="{{ active('nav-item', name='spell') }}">
-                                <a class="nav-link" href="{{ page('spell') }}">{{ text('Правопис') }}</a>
+                                <a class="nav-link" href="{{ page('abc') }}">{{ text('Абетка та правопис') }}</a>
                             </li>
                             <li class="{{ active('nav-item', name='usage') }}">
                                 <a class="nav-link" href="{{ page('usage') }}">{{ text('Вживання') }}</a>
                             </li>
-                            <li class="nav-item dropdown">
-                                <a class="{{ active('nav-link dropdown-toggle', name__startswith='examples/') }}" data-toggle="dropdown" href="#">{{ text('Приклади') }}</a>
-                                <div class="dropdown-menu">
-                                    <a class="{{ active('dropdown-item', name='examples/mavka') }}" href="{{ page('examples/mavka') }}">{{ text('Леся Українка') }}</a>
-                                    <a class="{{ active('dropdown-item', name='examples/sadok') }}" href="{{ page('examples/sadok') }}">{{ text('Тарас Шевченко') }}</a>
-                                </div>
+                            <li class="{{ active('nav-item', name='examples') }}">
+                                <a class="nav-link" href="{{ page('examples') }}">{{ text('Приклади') }}</a>
                             </li>
                         </ul>
-                        <hr class="d-md-none">
-                        <div class="btn-group d-none d-md-flex mx-auto">
+                        <hr class="d-lg-none">
+                        <div class="btn-group d-none d-lg-flex mx-auto">
                             <a class="{{ active('btn btn-success', name='conv') }}" role="button" href="{{ page('conv') }}">{{ text('Конвертер') }}</a>
                             <a class="btn btn-success" role="button" href="{{ page('conv') }}" target="_blank" title="{{ text('Відкрити окремо') }}">&#x1f855;</a>
                         </div>
-                        <div class="d-md-none">
+                        <div class="d-lg-none">
                             <a class="{{ active('btn btn-success w-100', name='conv') }}" role="button" href="{{ page('conv') }}">{{ text('Конвертер') }}</a>
                         </div>
-                        <hr class="d-md-none">
+                        <hr class="d-lg-none">
                         <div class="btn-group btn-group-sm d-flex">
                             <a class="{{ active('btn btn-light w-100', mode='cyr') }}" role="button" href="{{ switch('cyr') }}">Кирилиця</a>
                             <a class="{{ active('btn btn-light w-100', mode='lat') }}" role="button" href="{{ switch('lat') }}">{{ encode('Латинка') }}</a>

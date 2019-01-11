@@ -112,3 +112,9 @@ body > .container {
     padding-left: .5em;
     padding-right: .5em;
 }
+
+.nobull {
+    list-style: none;
+    padding-left: 0;
+    text-indent: -1em;
+}

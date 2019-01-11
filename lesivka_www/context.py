@@ -1,6 +1,6 @@
 import re
 
-from flask import request, url_for
+from flask import Markup, request, url_for
 
 from .utils import encode, get_mode
 
@@ -10,7 +10,7 @@ _clauses = {
     'startswith': lambda a, b: a.startswith(b),
 }
 
-_clean_pat = re.compile('\W')
+_clean_pat = re.compile('\u0301')
 
 
 def active(classes='', **checks):
@@ -34,11 +34,9 @@ def switch(mode):
     return url_for(endpoint, **args)
 
 
-def text(t, clear=False):
+def text(t):
     if get_mode() == 'lat':
-        if clear:
-           t = _clean_pat.sub('', t)
+        t = _clean_pat.sub('', t)
+        t = encode(t)
 
-        return encode(t)
-
-    return t
+    return Markup(t)

@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% from 'macros.html' import examples with context %}
 {% from 'macros.html' import letter %}
+{% from 'macros.html' import usage, usagej with context %}
 {% block title %}{{ text('Абетка та правопис') }}{% endblock %}
 {% block content %}
 <h1 class="mt-3 text-center">{{ text('Абетка') }}</h1>
@@ -81,4 +82,54 @@
     <li>{{ text('Літеросполучення') }} <b>дж</b>, <b>дз</b> &rarr; <b>đ</b>, <b>ƶ</b>: {{ examples('джміль', 'бджілка', 'дзвоник', 'ґедзь') }}
         {{ text('Але на межі префікса і кореня') }} <b>дж</b>, <b>дз</b> &rarr; <b>dž</b>, <b>dz</b>: {{ examples('підживити', 'відзначити') }}</li>
 </ol>
+
+<h1 class="text-center mt-3">{{ text('Вживання') }}</h1>
+<div class="table-responsive">
+    <table class="table table-bordered usage">
+        <thead class="thead-dark">
+            <tr class="d-none d-md-table-row">
+                <th class="inline-block text-truncate">{{ text('Кирилиця') }}</th>
+                <th>{{ text('Лесівка') }}</th>
+                <th colspan="2">{{ text('Приклад') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ usage('а', 'акула') }}
+            {{ usage('б', 'бабак') }}
+            {{ usage('в', 'вовк') }}
+            {{ usage('г', 'галка') }}
+            {{ usage('ґ', 'ґава') }}
+            {{ usage('д', 'дуб') }}
+            {{ usage('е', 'ему') }}
+            {{ usagej('є', 'єнот', 'майбутнє') }}
+            {{ usage('ж', 'жаба') }}
+            {{ usage('з', 'зубр') }}
+            {{ usage('и', 'калина') }}
+            {{ usagej('і', 'ігуана', 'ластівка') }}
+            {{ usage('ї', 'їжак') }}
+            {{ usage('й', 'йорж') }}
+            {{ usage('к', 'качка') }}
+            {{ usage('л', 'лелека') }}
+            {{ usage('м', 'муха') }}
+            {{ usage('н', 'нетопир') }}
+            {{ usage('о', 'орел') }}
+            {{ usage('п', 'павич') }}
+            {{ usage('р', 'равлик') }}
+            {{ usage('с', 'собака') }}
+            {{ usage('т', 'тигр') }}
+            {{ usage('у', 'удав') }}
+            {{ usage('ф', 'фретка') }}
+            {{ usage('х', 'ховрах') }}
+            {{ usage('ц', 'цесарка') }}
+            {{ usage('ч', 'чайка') }}
+            {{ usage('ш', 'шпак') }}
+            {{ usage('щ', 'щур') }}
+            {{ usage('ь', 'олень', softsign=True) }}
+            {{ usagej('ю', 'юнак', 'гадюка') }}
+            {{ usagej('я', 'яструб', 'дятел') }}
+            {{ usage('дж', 'джміль') }}
+            {{ usage('дз', 'ґедзь') }}
+        </tbody>
+    </table>
+</div>
 {% endblock %}

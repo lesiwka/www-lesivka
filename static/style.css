@@ -118,3 +118,7 @@ body > .container {
     padding-left: 0;
     text-indent: -1em;
 }
+
+.carousel-caption, .carousel-control-next, .carousel-control-prev, .carousel-indicators {
+    filter: invert(100%);
+}

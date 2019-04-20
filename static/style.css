@@ -122,3 +122,7 @@ body > .container {
 .carousel-caption, .carousel-control-next, .carousel-control-prev, .carousel-indicators {
     filter: invert(100%);
 }
+
+.display-table {
+    display: table;
+}

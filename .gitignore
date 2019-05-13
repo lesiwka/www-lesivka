@@ -1,7 +1,7 @@
 .idea/
 __pycache__/
 lesivka/
-static/lesivka.js
+static/js/lesivka.js
 templates/gtag.html
 SECRET_KEY
 venv/

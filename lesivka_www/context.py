@@ -1,8 +1,8 @@
 import re
 
-from flask import Markup, request, url_for
+from flask import Markup, g, request, url_for
 
-from .utils import encode, get_mode
+from .utils import encode
 
 
 _clauses = {
@@ -23,8 +23,7 @@ def active(classes='', **checks):
 
 
 def page(name=None):
-    mode = get_mode()
-    return url_for('www.template_view', mode=mode, name=name)
+    return url_for('www.template_view', mode=g.mode, name=name)
 
 
 def switch(mode):
@@ -35,7 +34,7 @@ def switch(mode):
 
 
 def text(t):
-    if get_mode() == 'lat':
+    if g.mode == 'lat':
         t = _clean_pat.sub('', t)
         t = encode(t)
 

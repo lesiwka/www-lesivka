@@ -1,22 +1,15 @@
-from flask import Blueprint, redirect, render_template, session, url_for
+from flask import Blueprint, g, render_template
 
-from lesivka_www.utils import check_mode, get_mode, get_template
+from lesivka_www.utils import get_template
 
 www = Blueprint('www', __name__, template_folder='templates')
 
 
-@www.route('/')
-def root():
-    mode = get_mode()
-    return redirect(url_for('www.template_view', mode=mode))
-
-
-@www.route('/<mode>', defaults=dict(name='index'))
-@www.route('/<mode>/<path:name>')
+@www.route('/', defaults=dict(mode='cyr', name='index'))
+@www.route('/<path:name>', defaults=dict(mode='cyr'))
+@www.route('/lat', defaults=dict(mode='lat', name='index'))
+@www.route('/lat/<path:name>', defaults=dict(mode='lat'))
 def template_view(mode, name):
-    check_mode(mode)
-    if session.new:
-        session.permanent = True
-    session['mode'] = mode
+    g.mode = mode
     template = get_template(name)
     return render_template(template)

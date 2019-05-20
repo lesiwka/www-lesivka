@@ -1,27 +1,19 @@
-const CACHE = 'cache-v1';
+const CACHE = 'cache-v2';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        caches.open(CACHE).then((cache) => {
-            const request = new Request('/');
-            const response = new Response(null,
-                {status: 304, headers: {location: '/cyr'}});
-            return cache.put(request, response);
-        })
-    );
-    event.waitUntil(
         caches.open(CACHE).then((cache) => cache.addAll([
+            '/',
+            '/abc',
+            '/examples',
+            '/apps',
+            '/conv',
             '/lat',
             '/lat/abc',
             '/lat/examples',
             '/lat/apps',
             '/lat/conv',
-            '/cyr',
-            '/cyr/abc',
-            '/cyr/examples',
-            '/cyr/apps',
-            '/cyr/conv',
             '/css/style.css',
             '/fonts/NotoSans-Regular.woff2',
             '/images/facebook.png',

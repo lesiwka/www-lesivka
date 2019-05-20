@@ -1,19 +1,19 @@
-const CACHE = 'cache-v2';
+const CACHE = 'cache-v3';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE).then((cache) => cache.addAll([
             '/',
-            '/abc',
-            '/examples',
-            '/apps',
-            '/conv',
+            '/abetka',
+            '/prikladi',
+            '/zastosinki',
+            '/konverter',
             '/lat',
-            '/lat/abc',
-            '/lat/examples',
-            '/lat/apps',
-            '/lat/conv',
+            '/lat/abetka',
+            '/lat/prikladi',
+            '/lat/zastosinki',
+            '/lat/konverter',
             '/css/style.css',
             '/fonts/NotoSans-Regular.woff2',
             '/images/facebook.png',

@@ -4,6 +4,13 @@ from lesivka_www.utils import get_template
 
 www = Blueprint('www', __name__, template_folder='templates')
 
+redirects = {
+    'abc': 'abetka',
+    'examples': 'prikladi',
+    'apps': 'zastosunki',
+    'conv': 'konverter',
+}
+
 
 @www.route('/cyr', defaults=dict(name='index'))
 @www.route('/cyr/<path:name>')
@@ -18,5 +25,11 @@ def redirect_cyr(name):
 @www.route('/lat/<path:name>', defaults=dict(mode='lat'))
 def template_view(mode, name):
     g.mode = mode
+
+    if name in redirects:
+        name = redirects[name]
+        url = url_for('www.template_view', mode=mode, name=name)
+        return redirect(url, code=301)
+
     template = get_template(name)
     return render_template(template)

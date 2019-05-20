@@ -1,8 +1,15 @@
-from flask import Blueprint, g, render_template
+from flask import Blueprint, g, redirect, render_template, url_for
 
 from lesivka_www.utils import get_template
 
 www = Blueprint('www', __name__, template_folder='templates')
+
+
+@www.route('/cyr', defaults=dict(name='index'))
+@www.route('/cyr/<path:name>')
+def redirect_cyr(name):
+    url = url_for('www.template_view', mode='cyr', name=name)
+    return redirect(url, code=301)
 
 
 @www.route('/', defaults=dict(mode='cyr', name='index'))

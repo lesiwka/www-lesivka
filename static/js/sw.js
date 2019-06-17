@@ -1,4 +1,4 @@
-const CACHE = 'cache-v3';
+const CACHE = 'cache-v4';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
@@ -7,12 +7,12 @@ self.addEventListener('install', (event) => {
             '/',
             '/abetka',
             '/prikladi',
-            '/zastosinki',
+            '/zastosunki',
             '/konverter',
             '/lat',
             '/lat/abetka',
             '/lat/prikladi',
-            '/lat/zastosinki',
+            '/lat/zastosunki',
             '/lat/konverter',
             '/css/style.css',
             '/fonts/NotoSans-Regular.woff2',

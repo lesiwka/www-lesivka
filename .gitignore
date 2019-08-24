@@ -3,6 +3,5 @@ __pycache__/
 lesivka/
 static/js/lesivka.js
 templates/gtag.html
-SECRET_KEY
 venv/
 _downloads/

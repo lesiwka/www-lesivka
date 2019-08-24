@@ -16,6 +16,7 @@ app.secret_key = bytes.fromhex(Settings.get('SECRET_KEY'))
 @app.context_processor
 def template_injection():
     return dict(
+        TRACKING_ID=Settings.get('TRACKING_ID'),
         active=active,
         encode=encode,
         page=page,

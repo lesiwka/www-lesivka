@@ -1,4 +1,4 @@
-const CACHE = 'cache-v4';
+const CACHE = 'cache-v5';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
@@ -49,7 +49,7 @@ function fromNetwork(request, timeout) {
 
 function fromCache(request) {
     return caches.open(CACHE).then((cache) =>
-        cache.match(request).then((matching) =>
+        cache.match(request, {ignoreSearch: true}).then((matching) =>
             matching || new Response(new Blob(), {status: 404})
         )
     );

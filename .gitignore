@@ -2,5 +2,5 @@
 __pycache__/
 lesivka/
 static/js/lesivka.js
-venv/
+.venv/
 _downloads/

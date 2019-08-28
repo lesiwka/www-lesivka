@@ -17,5 +17,5 @@
 __pycache__/
 
 .idea
-venv/
+.venv/
 _downloads/

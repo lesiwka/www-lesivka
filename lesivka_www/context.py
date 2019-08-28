@@ -22,8 +22,12 @@ def active(classes='', **checks):
     return ' '.join([classes, 'active'])
 
 
+def mode():
+    return getattr(g, 'mode', 'cyr')
+
+
 def page(name=None):
-    return url_for('www.template_view', mode=g.mode, name=name)
+    return url_for('www.template_view', mode=mode(), name=name)
 
 
 def switch(mode):
@@ -34,7 +38,7 @@ def switch(mode):
 
 
 def text(t):
-    if g.mode == 'lat':
+    if mode() == 'lat':
         t = _clean_pat.sub('', t)
         t = encode(t)
 

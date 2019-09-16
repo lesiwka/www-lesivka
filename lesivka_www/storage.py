@@ -1,6 +1,7 @@
 from google.cloud import ndb
 
 NOT_SET = 'NOT SET'
+client = ndb.Client()
 
 
 class Settings(ndb.Model):
@@ -9,8 +10,7 @@ class Settings(ndb.Model):
 
     @classmethod
     def get(cls, name):
-
-        with ndb.Client().context():
+        with client.context():
             entity = cls.query(Settings.name == name).get()
 
             if entity is None:
@@ -23,5 +23,3 @@ class Settings(ndb.Model):
             raise ValueError(name)
 
         return entity.value
-
-

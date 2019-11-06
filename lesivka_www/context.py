@@ -30,10 +30,10 @@ def page(name=None):
     return url_for('www.template_view', mode=mode(), name=name)
 
 
-def switch(mode):
+def switch(new_mode):
     endpoint = request.endpoint
     args = request.view_args.copy()
-    args['mode'] = mode
+    args['mode'] = new_mode
     return url_for(endpoint, **args)
 
 

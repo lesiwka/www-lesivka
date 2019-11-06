@@ -33,56 +33,13 @@
     </head>
 
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
-                <div class="container d-flex justify-content-between">
-                    <div class="navbar-brand font-weight-bold">{{ encode('Лесівка') }}</div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav">
-                            <li class="{{ active('nav-item', name='index') }}">
-                                <a class="nav-link" href="{{ page() }}">{{ text('Загальні відомості') }}</a>
-                            </li>
-                            <li class="{{ active('nav-item', name='abetka') }}">
-                                <a class="nav-link" href="{{ page('abetka') }}">{{ text('Абетка та правопис') }}</a>
-                            </li>
-                            <li class="{{ active('nav-item', name='prikladi') }}">
-                                <a class="nav-link" href="{{ page('prikladi') }}">{{ text('Приклади') }}</a>
-                            </li>
-                            <li class="{{ active('nav-item', name='zastosunki') }}">
-                                <a class="nav-link" href="{{ page('zastosunki') }}">{{ text('Застосунки') }}</a>
-                            </li>
-                        </ul>
-                        <hr class="d-lg-none">
-                        <div class="btn-group d-none d-lg-flex mx-auto">
-                            <a class="{{ active('btn btn-success', name='konverter') }}" role="button" href="{{ page('konverter') }}">{{ text('Конвертер') }}</a>
-                            <a class="btn btn-success" role="button" href="{{ page('konverter') }}" target="_blank" title="{{ text('Відкрити окремо') }}">&#x1f855;</a>
-                        </div>
-                        <div class="d-lg-none">
-                            <a class="{{ active('btn btn-success w-100', name='konverter') }}" role="button" href="{{ page('konverter') }}">{{ text('Конвертер') }}</a>
-                        </div>
-                        <hr class="d-lg-none">
-                        <div class="btn-group btn-group-sm d-flex">
-                            <a class="{{ active('btn btn-light w-100', mode='cyr') }}" role="button" href="{{ switch('cyr') }}">Кирилиця</a>
-                            <a class="{{ active('btn btn-light w-100', mode='lat') }}" role="button" href="{{ switch('lat') }}">{{ encode('Латинка') }}</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        {% if not popup %}{% include 'header.html' %}{% endif %}
 
-        <main role="main" class="container">
+        <main role="main" class="container{% if popup %}-popup{% endif %}">
             {% block content %}{% endblock %}
         </main>
 
-        <footer class="footer bg-warning">
-            <div class="container d-flex justify-content-between">
-                <span>&copy; 2018&ndash;2019 {{ text('Олександр Тішин') }}</span>
-                <a class="" href="https://facebook.com/lesivka" target="_blank"><img title="Facebook" src="/images/facebook.png"></a>
-            </div>
-        </footer>
+        {% if not popup %}{% include 'footer.html' %}{% endif %}
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

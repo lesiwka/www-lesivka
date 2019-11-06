@@ -33,3 +33,11 @@ def template_view(mode, name):
 
     template = get_template(name)
     return render_template(template)
+
+
+@www.route('/konverter-popup', defaults=dict(mode='cyr'))
+@www.route('/lat/konverter-popup', defaults=dict(mode='lat'))
+def konverter_popup(mode):
+    g.mode = mode
+    template = get_template('konverter')
+    return render_template(template, popup=True)

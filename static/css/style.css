@@ -28,6 +28,10 @@ body > .container {
     padding: 60px 15px 10px;
 }
 
+body > .container-popup {
+    padding: 0 10px;
+}
+
 .footer > .container {
     padding-right: 15px;
     padding-left: 15px;

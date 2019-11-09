@@ -32,6 +32,11 @@ handlers:
   static_dir: static/js
   secure: always
 
+# to handle /static/og-image.jpg
+- url: /static
+  static_dir: static/icons
+  secure: always
+
 - url: /.*
   script: auto
   secure: always

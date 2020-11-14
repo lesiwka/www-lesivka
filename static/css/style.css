@@ -130,3 +130,7 @@ body > .container-popup {
 .display-table {
     display: table;
 }
+
+.logo-img {
+    width: 240px;
+}

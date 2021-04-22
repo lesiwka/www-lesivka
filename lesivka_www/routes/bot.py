@@ -47,4 +47,4 @@ def convert(message: Message):
 
 @telebot.message_handler(func=chat_type("private"))
 def encode(message: Message):
-    telebot.reply_to(message, lesivka.encode(message.text))
+    telebot.send_message(message.chat.id, lesivka.encode(message.text))

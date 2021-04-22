@@ -1,5 +1,8 @@
 runtime: python37
 
+includes:
+  - env_variables.yaml
+
 handlers:
 - url: /(site\.webmanifest|browserconfig\.xml)$
   static_files: static/manifests/\1

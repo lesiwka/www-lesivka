@@ -1,6 +1,7 @@
-.idea/
+/.idea/
+/.venv/
+/_downloads/
+/env_variables.yaml
+/index.yaml
+/static/js/lesivka.js
 __pycache__/
-lesivka/
-static/js/lesivka.js
-.venv/
-_downloads/

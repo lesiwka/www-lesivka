@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, render_template
 from jinja2.exceptions import TemplateNotFound
 
@@ -5,19 +7,18 @@ from lesivka_www.context import active, page, switch, text
 from lesivka_www.middleware import ndb_middleware
 from lesivka_www.routes.www import www
 from lesivka_www.routes.transcode import transcode
-from lesivka_www.storage import Settings
+from lesivka_www.routes.www import www
 from lesivka_www.utils import encode, get_template
 
 app = Flask(__name__)
 app.register_blueprint(www)
 app.register_blueprint(transcode)
-app.wsgi_app = ndb_middleware(app.wsgi_app)
 
 
 @app.context_processor
 def template_injection():
     return dict(
-        TRACKING_ID=Settings.get('TRACKING_ID'),
+        TRACKING_ID=os.environ["TRACKING_ID"],
         active=active,
         encode=encode,
         page=page,

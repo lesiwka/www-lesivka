@@ -1,3 +1,4 @@
 env_variables:
   SECRET_KEY: <secret>
   TRACKING_ID: <id>
+  TELEGRAM_BOT_TOKEN: <token>

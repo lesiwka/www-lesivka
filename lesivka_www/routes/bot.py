@@ -33,7 +33,7 @@ def start(message: Message):
 
 
 @telebot.message_handler(
-    commands=["lesivka"],
+    commands=["lesivka", "лесівка"],
     func=chat_type("group", "supergroup"),
 )
 def convert(message: Message):

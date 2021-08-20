@@ -37,7 +37,11 @@ body > .container-popup {
     padding-left: 15px;
 }
 
-.abc {
+.abc td {
+    border: 1px solid #000000;
+}
+
+.abc .letterbox {
     background-color: #cfe2f3;
 }
 
@@ -55,6 +59,14 @@ body > .container-popup {
 
 .abc .vowel {
     background-color: #f4cccc;
+}
+
+.abc .vowel-i {
+    background-color: #fff2cc;
+}
+
+.abc .empty {
+    border: 0;
 }
 
 .letter {

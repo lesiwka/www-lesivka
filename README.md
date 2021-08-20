@@ -1,2 +1,2 @@
 # www-lesivka
-Leśivka's website
+Lesivka's website

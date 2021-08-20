@@ -1,3 +1,3 @@
-Flask~=1.1.2
-pyTelegramBotAPI~=3.7.7
-git+https://github.com/lesivka/python-lesivka.git#egg=lesivka
+Flask~=1.1.4
+pyTelegramBotAPI~=3.7.9
+lesivka~=1.5.20210622.1

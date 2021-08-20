@@ -1,8 +1,12 @@
 {% macro letter(l, n, c=None) -%}
-<div class="col border border-dark{% if c %} {{ c }}{% endif %}">
-    <div class="mt-3 letter">{{ l }} {{ l | lower }}</div>
+<td class="letterbox{% if c %} {{ c }}{% endif %}">
+    <div class="mt-3 letter">{{ l }}&nbsp;{{ l | lower }}</div>
     <div class="mb-3 letter-name">({{ n }})</div>
-</div>
+</td>
+{%- endmacro %}
+
+{% macro empty() -%}
+<td class="empty"></td>
 {%- endmacro %}
 
 {% macro hoverable(word) -%}
@@ -37,6 +41,21 @@
 </tr>
 <tr>
     <td class="text-nowrap">{{ text('скіпка') }} + {{ encode(letter)[-1] }}</td>
+    <td class="d-none d-md-table-cell">{{ example2 }}</td>
+    <td class="d-none d-md-table-cell">{{ encode(example2) }}</td>
+    <td class="d-table-cell d-md-none">{{ hoverable(example2) }}</td>
+</tr>
+{%- endmacro %}
+
+{% macro usagei(letter, example1, example2) -%}
+<tr>
+    <td rowspan="2">{{ letter }}</td>
+    <td rowspan="2">{{ encode(letter) }}</td>
+    <td class="d-none d-md-table-cell">{{ example1 }}</td>
+    <td class="d-none d-md-table-cell">{{ encode(example1) }}</td>
+    <td class="d-table-cell d-md-none">{{ hoverable(example1) }}</td>
+</tr>
+<tr>
     <td class="d-none d-md-table-cell">{{ example2 }}</td>
     <td class="d-none d-md-table-cell">{{ encode(example2) }}</td>
     <td class="d-table-cell d-md-none">{{ hoverable(example2) }}</td>

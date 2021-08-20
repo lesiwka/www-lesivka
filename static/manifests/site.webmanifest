@@ -1,6 +1,6 @@
 {
-    "name": "Les\u0301ivka",
-    "short_name": "Les\u0301ivka",
+    "name": "Lesivka",
+    "short_name": "Lesivka",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -15,6 +15,5 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "start_url": "https://lesivka.com",
     "display": "standalone"
 }

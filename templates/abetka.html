@@ -1,66 +1,67 @@
 {% extends 'base.html' %}
 {% from 'macros.html' import examples with context %}
-{% from 'macros.html' import letter %}
-{% from 'macros.html' import usage, usagej with context %}
+{% from 'macros.html' import letter, empty %}
+{% from 'macros.html' import usage, usagei, usagej with context %}
 {% block title %}{{ text('Абетка та правопис') }}{% endblock %}
 {% block content %}
 <h1 class="mt-3 text-center">{{ text('Абетка') }}</h1>
 <p>
-    {{ text('Абетка складається з') }} <b>28</b> {{ text('літер:') }} <b>5</b> {{ text('голосних і') }} <b>23</b> {{ text('приголосних') }}
+    {{ text('Абетка складається з') }} <b>29</b> {{ text('літер:') }} <b>6</b> {{ text('голосних і') }} <b>23</b> {{ text('приголосних') }}
 </p>
-<div class="text-center container mb-3 text-nowrap abc">
-    <div class="row border border-dark">
-        {{ letter('A', 'а', 'vowel') }}
-        {{ letter('B', 'бе') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('C', 'це') }}
-        {{ letter('Č', 'че', 'caron') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('D', 'де') }}
-        {{ letter('Đ', 'дже', 'stroke') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('E', 'е', 'vowel') }}
-        <div class="w-100 d-none d-md-block"></div>
-        {{ letter('F', 'еф') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('G', 'ґе') }}
-        {{ letter('H', 'ге/га') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('I', 'и', 'vowel') }}
-        {{ letter('J', 'йот', 'jot') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('K', 'ка') }}
-        {{ letter('L', 'ел') }}
-        <div class="w-100"></div>
-        {{ letter('M', 'ем') }}
-        {{ letter('N', 'ен') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('O', 'о', 'vowel') }}
-        {{ letter('P', 'пе') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('R', 'ер') }}
-        {{ letter('S', 'ес') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('Š', 'ша/еш', 'caron') }}
-        <div class="w-100 d-none d-md-block"></div>
-        {{ letter('T', 'те') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('U', 'у', 'vowel') }}
-        {{ letter('V', 'ве') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('X', 'ха') }}
-        {{ letter('Z', 'зе') }}
-        <div class="w-100 d-md-none"></div>
-        {{ letter('Ž', 'же', 'caron') }}
-        {{ letter('Ƶ', 'дзе', 'stroke') }}
-    </div>
+<div class="table-responsive">
+    <table class="abc table table-bordered table-sm text-center">
+        <tbody>
+            <tr>
+                {{ letter('A', 'а', 'vowel') }}
+                {{ letter('B', 'бе') }}
+                {{ letter('C', 'це') }}
+                {{ letter('Č', 'че', 'caron') }}
+                {{ letter('D', 'де') }}
+                {{ letter('Đ', 'дже', 'stroke') }}
+                {{ letter('E', 'е', 'vowel') }}
+            </tr>
+            <tr>
+                {{ letter('F', 'еф') }}
+                {{ letter('G', 'ґе') }}
+                {{ letter('H', 'га') }}
+                {{ letter('I', 'і', 'vowel-i') }}
+                {{ letter('J', 'йот', 'jot') }}
+                {{ letter('K', 'ка') }}
+                {{ letter('L', 'ел') }}
+            </tr>
+            <tr>
+                {{ letter('M', 'ем') }}
+                {{ letter('N', 'ен') }}
+                {{ letter('O', 'о', 'vowel') }}
+                {{ letter('P', 'пе') }}
+                {{ letter('R', 'ер') }}
+                {{ letter('S', 'ес') }}
+                {{ letter('Š', 'еш', 'caron') }}
+            </tr>
+            <tr>
+                {{ empty() }}
+                {{ letter('T', 'те') }}
+                {{ letter('U', 'у', 'vowel') }}
+                {{ letter('V', 'ве') }}
+                {{ letter('X', 'ха') }}
+                {{ letter('Y', 'и', 'vowel') }}
+            </tr>
+            <tr>
+                {{ empty() }}
+                {{ empty() }}
+                {{ letter('Z', 'зе') }}
+                {{ letter('Ž', 'же', 'caron') }}
+                {{ letter('Ƶ', 'дзе', 'stroke') }}
+            </tr>
+        </tbody>
+    </table>
 </div>
 
 <h1 class="mt-3 text-center">{{ text('Правопис') }}</h1>
 <h3 class="text-center">I</h3>
 <ol>
-    <li>{{ text('Голосні') }} <b>а</b>, <b>е</b>, <b>и</b>, <b>о</b>, <b>у</b> &rarr;
-        <b>a</b>, <b>e</b>, <b>i</b>, <b>o</b>, <b>u</b></li>
+    <li>{{ text('Голосні') }} <b>а</b>, <b>е</b>, <b>и</b>, <b>і</b>, <b>о</b>, <b>у</b> &rarr;
+        <b>a</b>, <b>e</b>, <b>y</b>, <b>i</b>, <b>o</b>, <b>u</b></li>
     <li>{{ text('Приголосні') }} <b>б</b>, <b>в</b>, <b>г</b>, <b>ґ</b>, <b>д</b>, <b>з</b>, <b>к</b>, <b>л</b>, <b>м</b>, <b>н</b>, <b>п</b>, <b>р</b>, <b>с</b>, <b>т</b>, <b>ф</b>, <b>х</b>, <b>ц</b> &rarr;
         <b>b</b>, <b>v</b>, <b>h</b>, <b>g</b>, <b>d</b>, <b>z</b>, <b>k</b>, <b>l</b>, <b>m</b>, <b>n</b>, <b>p</b>, <b>r</b>, <b>s</b>, <b>t</b>, <b>f</b>, <b>x</b>, <b>c</b></li>
     <li>{{ text('Шиплячі приголосні') }} <b>ж</b>, <b>ч</b>, <b>ш</b> &rarr; <b>ž</b>, <b>č</b>, <b>š</b></li>
@@ -71,8 +72,7 @@
 </ol>
 <h3 class="text-center">II</h3>
 <ol>
-    <li>{{ text('На початку слова й після голосних') }} <b>і</b> {{ text('та') }} <b>и</b> &rarr; <b>i</b>: {{ examples('ігуана', 'праістота', 'индик') }}</li>
-    <li>{{ text('Після приголосних') }} <b>і</b> &rarr; {{ text("пом'якшена приголосна") }} + <b>i</b>: {{ examples('ластівка') }}</li>
+    <li><b>i</b> {{ text("завжди пом'якшує попередню приголосну, скіпка над якою не ставиться") }}: {{ examples('ластівка') }}</li>
     <li>{{ text("Йотовані голосні на початку слова, після голосних, апострофа та знака м'якшення") }} <b>є</b>, <b>ю</b>, <b>я</b> &rarr; <b>je</b>, <b>ju</b>, <b>ja</b>: {{ examples('єнот', 'знаю', "сім'я") }}</li>
     <li>{{ text('Після приголосних') }} <b>є</b>, <b>ю</b>, <b>я</b> &rarr; {{ text("пом'якшена приголосна") }} + <b>e</b>, <b>u</b>, <b>a</b>: {{ examples('майбутнє', 'гадюка', 'дятел') }}</li>
 </ol>
@@ -83,7 +83,7 @@
     <li>{{ text('На межі префікса і кореня') }} <b>дж</b>, <b>дз</b> &rarr; <b>dž</b>, <b>dz</b>: {{ examples('підживити', 'відзначити') }}</li>
 </ol>
 
-<h1 class="text-center mt-3">{{ text('Вживання') }}</h1>
+<h1 class="text-center mt-3">{{ text('Вжиток') }}</h1>
 <div class="table-responsive">
     <table class="table table-bordered usage">
         <thead class="thead-dark">
@@ -104,8 +104,8 @@
             {{ usagej('є', 'єнот', 'майбутнє') }}
             {{ usage('ж', 'жаба') }}
             {{ usage('з', 'зубр') }}
-            {{ usage('и', 'калина') }}
-            {{ usagej('і', 'ігуана', 'ластівка') }}
+            {{ usage('и', 'индик') }}
+            {{ usagei('і', 'ігуана', 'ластівка') }}
             {{ usage('ї', 'їжак') }}
             {{ usage('й', 'йорж') }}
             {{ usage('к', 'качка') }}

@@ -1,6 +1,6 @@
 import os
 
-import lesivka
+import lesiwka
 from flask import Blueprint, Response, request
 from telebot import TeleBot
 from telebot.types import Message, Update
@@ -42,9 +42,9 @@ def convert(message: Message):
     except ValueError:
         telebot.send_message(message.chat.id, START_MSG)
     else:
-        telebot.reply_to(message, lesivka.encode(text))
+        telebot.reply_to(message, lesiwka.encode(text))
 
 
 @telebot.message_handler(func=chat_type("private"))
 def encode(message: Message):
-    telebot.send_message(message.chat.id, lesivka.encode(message.text))
+    telebot.send_message(message.chat.id, lesiwka.encode(message.text))

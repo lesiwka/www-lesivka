@@ -5,15 +5,15 @@
 <form class="conv">
     <div class="row">
         <div class="form-group col">
-            <textarea id="cyr" class="form-control" placeholder="{{ text('Кирилиця') }}" oninput="document.getElementById('lat').value = lesivka.encode(document.getElementById('cyr').value);"></textarea>
+            <textarea id="cyr" class="form-control" placeholder="{{ text('Кирилиця') }}" oninput="document.getElementById('lat').value = lesiwka.encode(document.getElementById('cyr').value);"></textarea>
         </div>
         <div class="w-100 d-md-none"></div>
         <div class="form-group col">
-            <textarea id="lat" class="form-control" placeholder="{{ text('Латинка') }}" oninput="document.getElementById('cyr').value = lesivka.decode(document.getElementById('lat').value);"></textarea>
+            <textarea id="lat" class="form-control" placeholder="{{ text('Латинка') }}" oninput="document.getElementById('cyr').value = lesiwka.decode(document.getElementById('lat').value);"></textarea>
         </div>
     </div>
 </form>
 {% endblock %}
 {% block script %}
-<script src="/js/lesivka.js"></script>
+<script src="/js/lesiwka.js"></script>
 {% endblock %}

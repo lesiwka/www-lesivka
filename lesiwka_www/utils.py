@@ -1,10 +1,9 @@
+import lesiwka
 from flask import Markup, request
-
-import lesivka
 
 
 def encode(text):
-    text = lesivka.encode(text).encode('ascii', 'xmlcharrefreplace').decode()
+    text = lesiwka.encode(text).encode("ascii", "xmlcharrefreplace").decode()
     return Markup(text)
 
 

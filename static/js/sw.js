@@ -17,7 +17,7 @@ self.addEventListener('install', (event) => {
             '/css/style.css',
             '/fonts/NotoSans-Regular.woff2',
             '/images/facebook.png',
-            '/js/lesivka.js',
+            '/js/lesiwka.js',
             '/js/index.js',
             '/images/kbd-ua-lesivka.png',
             '/images/kbd-ua-lesivka-eng.png',

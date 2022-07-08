@@ -1,4 +1,4 @@
-from flask import Blueprint, g, redirect, render_template, url_for
+from flask import Blueprint, redirect, render_template, url_for
 
 from lesiwka_www.utils import get_template
 
@@ -24,20 +24,17 @@ def redirect_cyr(name):
 @www.route("/lat", defaults=dict(mode="lat", name="index"))
 @www.route("/lat/<path:name>", defaults=dict(mode="lat"))
 def template_view(mode, name):
-    g.mode = mode
-
     if name in redirects:
         name = redirects[name]
         url = url_for("www.template_view", mode=mode, name=name)
         return redirect(url, code=301)
 
     template = get_template(name)
-    return render_template(template)
+    return render_template(template, mode=mode)
 
 
 @www.route("/konverter-popup", defaults=dict(mode="cyr"))
 @www.route("/lat/konverter-popup", defaults=dict(mode="lat"))
 def konverter_popup(mode):
-    g.mode = mode
     template = get_template("konverter")
-    return render_template(template, popup=True)
+    return render_template(template, mode=mode, popup=True)

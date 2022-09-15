@@ -18,7 +18,7 @@ app.register_blueprint(transcode)
 @app.context_processor
 def template_injection():
     return dict(
-        TRACKING_ID=os.environ["TRACKING_ID"],
+        TRACKING_ID=os.environ.get("TRACKING_ID"),
         active=active,
         encode=encode,
         page=page,

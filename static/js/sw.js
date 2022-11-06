@@ -1,4 +1,4 @@
-const CACHE = 'cache-v5';
+const CACHE = 'cache-v6';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
@@ -14,15 +14,22 @@ self.addEventListener('install', (event) => {
             '/lat/prikladi',
             '/lat/zastosunki',
             '/lat/konverter',
+            '/css/bootstrap.min.css',
             '/css/style.css',
             '/fonts/NotoSans-Regular.woff2',
             '/images/facebook.png',
-            '/js/lesiwka.js',
+            '/js/bootstrap.min.js',
             '/js/index.js',
-            '/images/kbd-ua-lesivka.png',
-            '/images/kbd-ua-lesivka-eng.png',
-            '/images/kbd-ua-lesivka-eng-alt.png',
-            '/images/chromium.png',
+            '/js/jquery.slim.min.js',
+            '/js/lesiwka.js',
+            '/js/popper.min.js',
+            '/images/kbd-en-lesiwka.png',
+            '/images/kbd-en-lesiwka-alt.png',
+            '/images/kbd-uk-lesiwka.png',
+            '/images/kbd-uk-lesiwka-phonetic.png',
+            '/images/chrome.png',
+            '/images/play-market.png',
+            '/images/telegram.png',
             '/site.webmanifest',
             '/android-chrome-192x192.png',
             '/android-chrome-512x512.png',

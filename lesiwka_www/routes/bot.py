@@ -10,7 +10,7 @@ bot = Blueprint("bot_hook", __name__)
 token = os.environ["TELEGRAM_BOT_TOKEN"]
 telebot = TeleBot(token)
 
-START_MSG = "Конвертер з кирилиці у лесівку. Подробиці https://lesivka.com"
+START_MSG = "Конвертер з кирилиці у лесівку. Подробиці https://lesiwka.com"
 
 
 def chat_type(*types):

@@ -22,6 +22,9 @@ handlers:
 - url: /fonts
   static_dir: static/fonts
 
+- url: /icons
+  static_dir: static/icons
+
 - url: /images
   static_dir: static/images
 

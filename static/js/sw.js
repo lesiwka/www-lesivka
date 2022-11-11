@@ -1,4 +1,4 @@
-const CACHE = 'cache-v6';
+const CACHE = 'cache-v7';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
@@ -23,6 +23,7 @@ self.addEventListener('install', (event) => {
             '/js/jquery.slim.min.js',
             '/js/lesiwka.js',
             '/js/popper.min.js',
+            '/icons/download.png',
             '/images/kbd-en-lesiwka.png',
             '/images/kbd-en-lesiwka-alt.png',
             '/images/kbd-uk-lesiwka.png',

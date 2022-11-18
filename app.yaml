@@ -4,7 +4,7 @@ includes:
   - env_variables.yaml
 
 handlers:
-- url: /(site\.webmanifest|browserconfig\.xml)$
+- url: /(robots\.txt|site\.webmanifest|browserconfig\.xml)$
   static_files: static/manifests/\1
   upload: static/manifests/.*
 

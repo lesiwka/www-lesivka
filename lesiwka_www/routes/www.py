@@ -6,9 +6,11 @@ www = Blueprint("www", __name__, template_folder="templates")
 
 redirects = {
     "abc": "abetka",
-    "examples": "prikladi",
-    "apps": "zastosunki",
+    "examples": "pryklady",
+    "apps": "zastosunky",
     "conv": "konverter",
+    "prikladi": "pryklady",
+    "zastosunki": "zastosunky",
 }
 
 

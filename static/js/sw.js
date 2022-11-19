@@ -1,4 +1,4 @@
-const CACHE = 'cache-v7';
+const CACHE = 'cache-v8';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
@@ -6,13 +6,13 @@ self.addEventListener('install', (event) => {
         caches.open(CACHE).then((cache) => cache.addAll([
             '/',
             '/abetka',
-            '/prikladi',
-            '/zastosunki',
+            '/pryklady',
+            '/zastosunky',
             '/konverter',
             '/lat',
             '/lat/abetka',
-            '/lat/prikladi',
-            '/lat/zastosunki',
+            '/lat/pryklady',
+            '/lat/zastosunky',
             '/lat/konverter',
             '/css/bootstrap.min.css',
             '/css/style.css',

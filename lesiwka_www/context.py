@@ -15,7 +15,7 @@ def active(classes='', **checks):
 
 @jinja2.pass_context
 def page(context, name=None):
-    mode = context["mode"]
+    mode = context.get("mode")
     return url_for("www.template_view", mode=mode, name=name)
 
 
@@ -28,7 +28,7 @@ def switch(new_mode):
 
 @jinja2.pass_context
 def text(context, t):
-    if context["mode"] == "lat":
+    if context.get("mode") == "lat":
         t = re.sub("\u0301", "", t)
         t = encode(t)
 

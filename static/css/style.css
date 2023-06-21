@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Noto Sans';
     src:
-        url('/fonts/NotoSans-Regular.woff2') format('woff2'),
-        url('/fonts/NotoSans-Regular.woff') format('woff'),
-        url('/fonts/NotoSans-Regular.ttf') format('truetype');
+        url('/static/fonts/NotoSans-Regular.woff2') format('woff2'),
+        url('/static/fonts/NotoSans-Regular.woff') format('woff'),
+        url('/static/fonts/NotoSans-Regular.ttf') format('truetype');
 }
 
 html {
@@ -147,7 +147,7 @@ body > .container-popup {
 }
 
 .download-icon {
-    content: url('/icons/download.png');
+    content: url('/static/icons/download.png');
     display: inline-block;
     vertical-align: middle;
     margin-right: .5em;

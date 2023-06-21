@@ -3,11 +3,11 @@ import os
 from flask import Flask, render_template
 from jinja2.exceptions import TemplateNotFound
 
-from lesiwka_www.context import active, page, switch, text
-from lesiwka_www.routes.bot import bot
-from lesiwka_www.routes.transcode import transcode
-from lesiwka_www.routes.www import www
-from lesiwka_www.utils import encode, get_template
+from context import active, page, switch, text
+from routes.bot import bot
+from routes.transcode import transcode
+from routes.www import www
+from utils import encode, get_template
 
 app = Flask(__name__)
 app.register_blueprint(bot)

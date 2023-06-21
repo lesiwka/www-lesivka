@@ -3,7 +3,7 @@ import re
 import jinja2
 from flask import Markup, request, url_for
 
-from .utils import encode
+from utils import encode
 
 
 def active(classes='', **checks):

@@ -1,6 +1,6 @@
 from flask import Blueprint, redirect, render_template, url_for
 
-from lesiwka_www.utils import get_template
+from utils import get_template
 
 www = Blueprint("www", __name__, template_folder="templates")
 

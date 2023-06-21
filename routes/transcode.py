@@ -1,7 +1,7 @@
 import lesiwka
 from flask import Blueprint
 
-from lesiwka_www.utils import get_text
+from utils import get_text
 
 transcode = Blueprint("transcode", __name__)
 

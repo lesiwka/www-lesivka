@@ -28,6 +28,10 @@ body > .container {
     padding: 60px 15px 10px;
 }
 
+.popup {
+    overflow: hidden;
+}
+
 body > .container-popup {
     padding: 0 10px;
 }

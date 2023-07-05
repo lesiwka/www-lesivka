@@ -33,7 +33,7 @@
         <link href="/static/css/style.css" rel="stylesheet">
     </head>
 
-    <body>
+    <body{% if popup %} class="popup"{% endif %}>
         {% if not popup %}{% include 'header.html' %}{% endif %}
 
         <main role="main" class="container{% if popup %}-popup{% endif %}">

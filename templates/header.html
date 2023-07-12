@@ -16,19 +16,17 @@
                     <li class="{{ active('nav-item', name='pryklady') }}">
                         <a class="nav-link" href="{{ page('pryklady') }}">{{ text('Приклади') }}</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="{{ active('nav-link dropdown-toggle', name=('zastosunky', 'nabirnyci')) }}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            {{ text('Застосунки') }}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ page('zastosunky') }}">{{ text('Читати') }}</a>
-                            <a class="dropdown-item" href="{{ page('nabirnyci') }}">{{ text('Писати') }}</a>
+                    <li class="d-flex justify-content-between">
+                        <div class="nav-item dropdown">
+                            <a class="{{ active('nav-link dropdown-toggle', name=('zastosunky', 'nabirnyci')) }}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ text('Застосунки') }}
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ page('zastosunky') }}">{{ text('Читати') }}</a>
+                                <a class="dropdown-item" href="{{ page('nabirnyci') }}">{{ text('Писати') }}</a>
+                            </div>
                         </div>
-                    </li>
-                    <li>
-                        <a href="https://novyny.lesiwka.com" target="_blank" title="{{ text('Новини України та світу українською латинкою') }}">
-                            <span class="badge novyny-icon">[N]</span>
-                        </a>
+                        <a class="btn p-0 my-auto novyny-icon align-middle" href="https://novyny.lesiwka.com" target="_blank" title="{{ text('Новини України та світу українською латинкою') }}">[N]</a>
                     </li>
                 </ul>
                 <hr class="d-lg-none">

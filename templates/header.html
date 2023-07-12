@@ -29,9 +29,9 @@
                     <a class="{{ active('btn btn-success w-100', name='konverter') }}" role="button" href="{{ page('konverter') }}">{{ text('Конвертер') }}</a>
                 </div>
                 <hr class="d-lg-none">
-                <div class="btn-group btn-group-sm d-flex">
-                    <a class="{{ active('btn btn-light w-100', mode='cyr') }}" role="button" href="{{ switch('cyr') }}">Кирилиця</a>
-                    <a class="{{ active('btn btn-light w-100', mode='lat') }}" role="button" href="{{ switch('lat') }}">{{ encode('Латинка') }}</a>
+                <div class="border border-light">
+                    <a class="{{ active('btn btn-primary w-100', mode='lat') }}" role="button" href="{{ switch() }}">{{ encode('ЛАТ') }}</a>
+                </div>
                 </div>
             </div>
         </div>

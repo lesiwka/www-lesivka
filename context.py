@@ -19,10 +19,12 @@ def page(context, name=None):
     return url_for("www.template_view", mode=mode, name=name)
 
 
-def switch(new_mode):
+@jinja2.pass_context
+def switch(context):
+    mode = context.get("mode")
     endpoint = request.endpoint
     args = request.view_args.copy()
-    args['mode'] = new_mode
+    args["mode"] = "cyr" if mode == "lat" else "lat"
     return url_for(endpoint, **args)
 
 

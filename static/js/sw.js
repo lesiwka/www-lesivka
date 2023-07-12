@@ -1,4 +1,4 @@
-const CACHE = 'cache-v9';
+const CACHE = 'cache-v10';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
@@ -29,6 +29,7 @@ self.addEventListener('install', (event) => {
             '/static/images/kbd-uk-lesiwka.png',
             '/static/images/kbd-uk-lesiwka-phonetic.png',
             '/static/images/chrome.png',
+            '/static/images/novyny.png',
             '/static/images/play-market.png',
             '/static/images/telegram.png',
             '/static/site.webmanifest',

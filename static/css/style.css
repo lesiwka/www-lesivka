@@ -156,3 +156,10 @@ body > .container-popup {
     vertical-align: middle;
     margin-right: .5em;
 }
+
+.novyny-icon {
+    color: #93c54b;
+    background-color: #3e3f3a;
+    border-color: #3e3f3a;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% block title %}{{ text('Застосунки') }}{% endblock %}
 {% block content %}
+<h1 class="mt-3 text-center">{{ text('Сайти') }}</h1>
+<div>
+<div class="mx-auto display-table">
+    <a href="https://novyny.lesiwka.com" target="_blank" title="{{ text('Новини України та світу українською латинкою') }}">
+        <img alt="[NOVYNY]" class="logo-img rounded" src="/static/images/novyny.png"/>
+    </a>
+</div>
+</div>
 <h1 class="mt-3 text-center">{{ text('Набірниці') }}</h1>
 <div id="kbd" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">

@@ -8,7 +8,8 @@ from utils import encode
 
 def active(classes='', **checks):
     for key, value in checks.items():
-        if request.view_args.get(key) != value:
+        arg = request.view_args.get(key)
+        if not (isinstance(value, tuple) and arg in value or arg == value):
             return classes
     return ' '.join([classes, 'active'])
 

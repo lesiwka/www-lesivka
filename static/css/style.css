@@ -140,7 +140,8 @@ body > .container-popup {
 }
 
 .logo-img {
-    width: 240px;
+    max-width: 360px;
+    width: 100%;
 }
 
 .outline {

@@ -1,4 +1,4 @@
-const CACHE = 'cache-v10';
+const CACHE = 'cache-v11';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {
@@ -8,11 +8,13 @@ self.addEventListener('install', (event) => {
             '/abetka',
             '/pryklady',
             '/zastosunky',
+            '/nabirnyci',
             '/konverter',
             '/lat',
             '/lat/abetka',
             '/lat/pryklady',
             '/lat/zastosunky',
+            '/lat/nabirnyci',
             '/lat/konverter',
             '/static/css/bootstrap.min.css',
             '/static/css/style.css',

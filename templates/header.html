@@ -22,8 +22,8 @@
                         </a>
                         <a class="btn p-0 mt-2 float-right novyny-icon" href="https://novyny.lesiwka.com" target="_blank" title="{{ text('Новини України та світу українською латинкою') }}">[N]</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ page('zastosunky') }}">{{ text('Читати') }}</a>
-                            <a class="dropdown-item" href="{{ page('nabirnyci') }}">{{ text('Писати') }}</a>
+                            <a class="{{ active('dropdown-item', name='zastosunky') }}" href="{{ page('zastosunky') }}">{{ text('Читати') }}</a>
+                            <a class="{{ active('dropdown-item', name='nabirnyci') }}" href="{{ page('nabirnyci') }}">{{ text('Писати') }}</a>
                         </div>
                     </li>
                 </ul>

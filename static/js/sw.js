@@ -1,4 +1,4 @@
-const CACHE = 'cache-v12';
+const CACHE = 'cache-v13';
 const timeout = 400;
 
 self.addEventListener('install', (event) => {

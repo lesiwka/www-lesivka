@@ -21,7 +21,7 @@ viber_conf = BotConfiguration(
 )
 viber = Api(viber_conf)
 
-START_MSG = "Конвертер з кирилиці в лесівку. Подробиці https://lesiwka.com"
+START_MSG = "Конвертер з кирилиці у лесівку\nПодробиці https://lesiwka.com"
 
 
 def chat_type(*types):
